@@ -1,0 +1,858 @@
+/* Reinicio básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding-top: 80px; /* espacio para header fijo */
+  margin: 0;
+}
+
+/* Header fijo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+/* Menú de navegación */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #222;
+}
+
+/* Título centrado meri's gallery */
+.titulo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  user-select: none;
+}
+
+/* Contenedor principal */
+main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bienvenida {
+  margin-left: 50px; /* puedes ajustar el valor */
+  margin-top: 70px; /* puedes ajustar el valor */
+}
+
+.bienvenida h2 {
+  font-size: 5rem;
+  font-weight: 700;
+	
+}
+
+
+/* Solo para el carrusel */
+.carrusel {
+  width: 100vw; /* ok para que ocupe toda la ventana */
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 80px;
+  /* Añadir para evitar que se salga del body */
+  box-sizing: border-box;
+}
+
+.slides {
+  display: flex;
+  width: calc(100vw * 4); /* 4 slides */
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100vw; /* Cada slide ocupa exactamente el ancho del viewport */
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  
+  /* Aquí va el truco para background image */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* Ajusta y recorta bien sin deformar */
+}
+
+
+/* Galería con efecto hover CORAZON */
+.hover-gallery-wrapper {
+  display: flex;
+  justify-content: center;   /* Centra horizontalmente */
+  align-items: center;       /* Centra verticalmente */
+  height: 100vh;             /* Ocupa toda la pantalla */
+  margin: 0;                 /* Elimina márgenes que lo desplacen */
+}
+
+.hover-gallery {
+  position: relative;
+  width: 500px;  /* ← mismo valor que .main-img */
+  height: 400px;
+  margin: 0 auto;
+}
+
+.main-img {
+  position: relative;
+  width: 500px;         /* ← hazlo más grande aquí */
+  height: auto;
+  z-index: 2;
+  display: block;
+  margin: 0 auto;       /* ← esto centra horizontalmente */
+}
+
+/* Contenedor de imágenes ocultas */
+.hidden-images {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Todas las imágenes ocultas */
+.hidden-images img {
+  position: absolute;
+  width: 200px; /* <-- Aumenta este valor para hacerlas más grandes */
+  height: auto;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) translate(0, 0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Al hacer hover en el contenedor */
+.hover-gallery:hover .hidden-images img {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Posiciones específicas para cada imagen formando círculo */
+
+/* 6 imágenes a 60º */
+.hover-gallery:hover .hidden-images img:nth-child(1) {
+  transform: translate(-50%, -50%) translate(0, -280px);
+}
+.hover-gallery:hover .hidden-images img:nth-child(2) {
+  transform: translate(-50%, -50%) translate(270px, -120px);
+}
+.hover-gallery:hover .hidden-images img:nth-child(3) {
+  transform: translate(-50%, -50%) translate(270px, 120px);
+}
+.hover-gallery:hover .hidden-images img:nth-child(4) {
+  transform: translate(-50%, -50%) translate(0, 220px);
+}
+.hover-gallery:hover .hidden-images img:nth-child(5) {
+  transform: translate(-50%, -50%) translate(-270px, 120px);
+}
+.hover-gallery:hover .hidden-images img:nth-child(6) {
+  transform: translate(-50%, -50%) translate(-270px, -120px);
+}
+
+/* Hover en cada imagen oculta para agrandar */
+.hidden-images img:hover {
+  transform: scale(1.1) translate(-50%, -50%);
+  z-index: 3;
+}
+
+
+
+/* Reset básico para evitar errores de box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Aseguramos que el body tenga espacio para empujar el footer abajo */
+html, body {
+  height: 113%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor principal para el contenido (para que el footer quede abajo) */
+main, .contact-section, .certifications-main {
+  flex: 1;
+}
+
+/* FOOTER BONITO Y COHERENTE EN TODAS LAS PÁGINAS */
+footer {
+  background-color: #000;
+  color: white;
+  padding: 20px 40px;
+  font-size: 14px;
+  user-select: none;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-icons a {
+  margin-right: 20px;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  filter: invert(1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .social-icons {
+    order: 2;
+  }
+  .footer-text {
+    order: 1;
+  }
+}
+/* Página de Certifications & Skills */
+.certificaciones-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.burbujas {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 60px auto 80px auto; /* Aquí aumentamos el margen superior */
+  flex-wrap: wrap;
+}
+
+.burbuja {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #000;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.burbuja span {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+}
+
+.burbuja .default-text {
+  opacity: 1;
+}
+
+.burbuja .hover-text {
+  opacity: 0;
+  color: black;
+}
+
+.burbuja:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.burbuja:hover .default-text {
+  opacity: 0;
+}
+
+.burbuja:hover .hover-text {
+  opacity: 1;
+}
+
+/* SKILLS ICONOS */
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+.titulo-seccion {
+  font-size: 20px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  text-align: center;
+  font-family: 'Arial Black', sans-serif; /* O la que quieras usar */
+}
+
+.skills-icons img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.skills-icons img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+	
+}
+/* NUEVO DISEÑO ICONOS CON NOMBRES */
+.skills-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+  margin-bottom: 80px; /* más espacio entre categorías */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.skill-item img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.skill-item span {
+  opacity: 0;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #444;
+  transition: opacity 0.3s ease;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.skill-item:hover {
+  filter: grayscale(0%);
+}
+
+.skill-item:hover img {
+  transform: scale(1.2);
+}
+
+.skill-item:hover span {
+  opacity: 1;
+}
+
+/* Estilo para títulos de categoría */
+.skills-section h2 {
+  font-size: 22px;
+  font-family: 'Arial Black', sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+  color: #111;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a.active {
+  border-bottom: 2px solid #000;
+}
+
+.projects-feed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+  grid-template-rows: repeat(2, 1fr);    /* 2 filas */
+  gap: 0; /* sin separación, pon aquí si quieres un poco de espacio */
+  width: 100%;          /* Ocupa todo el ancho del contenedor padre */
+  max-width: 1200px;    /* Máximo ancho para centrar y no expandir a toda la pantalla */
+  margin: 220px auto 50px auto; /* Margen superior e inferior, centrado horizontalmente */
+  padding: 0;
+  height: calc(2 * 250px);
+}
+
+/* Ajustamos altura fija para cada proyecto, para mantener el ratio */
+.project-tile {
+  position: relative;
+  overflow: hidden;
+  height: 250px; /* fija altura de cada tile */
+  cursor: pointer;
+  display: block; /* Asegura que el enlace ocupa todo el espacio */
+}
+
+.project-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  position: relative; /* Añadido por claridad de stacking */
+  z-index: 1; /* Asegura que la imagen esté detrás del overlay */
+}
+
+.project-tile .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0); /* Transparente por defecto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  z-index: 2; /* Asegura que el overlay está encima de la imagen */
+  pointer-events: none; /* Permite que el click siga funcionando en el enlace */
+}
+
+.project-tile:hover img {
+  transform: scale(1.05);
+}
+
+.project-tile:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  background: #fff;
+  color: #111;
+  overflow-x: hidden;
+}
+
+.scroll-showcase {
+  position: relative;
+  height: 400vh; /* largo suficiente para que se vea el efecto */
+  background: #f9f9f9;
+}
+
+.fixed-title {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.media-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100vh;
+}
+
+.media-item {
+  position: absolute;
+  width: 200px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+}
+
+.media-item.left {
+  left: 10%;
+}
+
+.media-item.right {
+  right: 10%;
+}
+
+.media-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.contact-section {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.contact-title {
+  font-size: 4rem;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+.contact-section {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.contact-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.contact-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	font-family: 'Poppins', sans-serif; /* Cambia la fuente aquí */
+  font-size: 26px;
+	font-weight: 600;                   /* Peso: 400 (normal), 500 (medio), 700 (bold) */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  color: #111; 
+}
+
+.contact-item:hover img {
+  opacity: 0;
+}
+
+.contact-item:hover .contact-hover {
+  opacity: 1;
+}
+
+body {
+  padding-bottom: 120px;
+}
+.pinterest-container {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  margin: 100px 0; /* un poco de espacio arriba y abajo */
+}
+  .video-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+	margin-top: 200px; /* o el margen que necesites */
+	margin-bottom: 135px; /* empuja el footer hacia abajo */
+    padding: 40px 20px;
+    background-color: white;
+  }
+
+  .iphone-video {
+    position: relative;
+    width: 330px;
+    height: 600px;
+    border-radius: 40px;
+    background: #111;
+    box-shadow:
+      inset 0 0 20px rgba(255,255,255,0.2),
+      0 15px 30px rgba(0,0,0,0.7);
+    overflow: hidden;
+    border: 12px solid #222;
+  }
+
+  /* "Pantalla" del iphone */
+  .iphone-video video {
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    object-fit: cover;
+  }
+
+.mute-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 15;
+  transition: background 0.3s ease;
+}
+
+.mute-btn:hover {
+  background: rgba(0,0,0,0.9);
+}
+
+  /* Títulos */
+/* Mejorar la "isla" del título */
+.video-title {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  background: rgba(0,0,0,0.75);
+  padding: 8px 20px;
+  border-radius: 25px 25px 25px 25px / 40px 40px 10px 10px; /* forma tipo isla */
+  z-index: 12;
+  pointer-events: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  user-select: none;
+	
+	  width: max-content; /* El ancho se ajusta al contenido */
+  max-width: 80%;     /* Pero que no sea más ancho que el 80% del contenedor */
+  text-align: center; /* Centra el texto dentro del bloque */
+  white-space: normal; /* Permite que el texto haga salto de línea */
+	   }
+	
+  @media (max-width: 768px) {
+    .video-row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .iphone-video {
+      width: 280px;
+      height: 510px;
+      margin-bottom: 30px;
+    }
+  }
+.conceptlab-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.conceptlab-item {
+  text-align: center;
+  margin-top: 60px; /* Espacio entre bloques */
+}
+
+.conceptlab-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.conceptlab-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+/* Tamaños específicos */
+.conceptlab-item.grande img {
+  max-width: 700px;
+}
+
+.conceptlab-item.mediana img {
+  max-width: 450px;
+}
+
+.conceptlab-item.pequeña img {
+  max-width: 200px;
+}
+
+.illustrations-gallery {
+	  margin-top: 100px; /* o el valor que necesites según la altura del menú */
+  display: grid;
+  grid-template-columns: repeat(2, 600px); /* Dos columnas de 600px */
+  justify-content: center; /* Centrar el grid */
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .illustrations-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.illustrations-item {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;      /* Centra verticalmente */
+  height: 700px;            /* Altura fija para alinear pares de imágenes */
+  margin-top: 0;            /* Elimina el espacio innecesario */
+}
+
+.illustrations-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.illustrations-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Mantiene proporción sin deformar */
+  display: block;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.video-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 600px);
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background-color: white;
+  margin-top: 120px; /* para que no quede detrás del menú */
+}
+
+@media (max-width: 768px) {
+  .video-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.design-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 20px;
+  padding: 80px 20px;
+  background-color: white;
+  margin-top: 80px; /* ajusta según tu navbar */
+}
+
+.design-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.design-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.design-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Estilos creativos adicionales */
+.design-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.design-item.tall {
+  grid-row: span 2;
+}
+
+.design-item.wide {
+  grid-column: span 2;
+}
+
+
+

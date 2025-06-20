@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Meri's Gallery</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <!-- MENÚ Y TÍTULO -->
+  <header>
+    <div class="menu-rosa">
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="certifications.html">Certifications & Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="titulo">
+      <h1>Meri's Gallery</h1>
+    </div>
+  </header>
+
+  <!-- CUERPO PRINCIPAL -->
+  <main>
+
+    <!-- Carrusel -->
+<section class="carrusel">
+  <div class="slides">
+    <div class="slide active" style="background-image: url('imagenes/portadaperfume.png');"></div>
+    <div class="slide" style="background-image: url('imagenes/proyecto3.png');"></div>
+    <div class="slide" style="background-image: url('imagenes/portada3.JPG');"></div>
+	      <div class="slide" style="background-image: url('imagenes/portada4.jpg');"></div>
+  </div>
+</section>
+
+    <!-- Texto de bienvenida -->
+<section class="bienvenida">
+  <h2>A curious eye. A playful hand. A bold vision.</h2>
+</section>
+
+
+<!-- Galería con animación HOVER -->
+<section class="hover-gallery-wrapper">
+  <div class="hover-gallery">
+    <img class="main-img" src="imagenes/imagen-principal.png" alt="Imagen principal" />
+    <div class="hidden-images">
+      <img src="imagenes/imagen-oculta1.png" alt="oculta 1">
+      <img src="imagenes/imagen-oculta2.png" alt="oculta 2">
+      <img src="imagenes/imagen-oculta3.png" alt="oculta 3">
+      <img src="imagenes/imagen-oculta4.png" alt="oculta 4">
+      <img src="imagenes/imagen-oculta5.png" alt="oculta 5">
+      <img src="imagenes/imagen-oculta6.png" alt="oculta 6">
+    </div>
+  </div>
+</section>
+	  
+
+  </main>
+
+  <!-- FOOTER FUERA DEL MAIN -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-text">© 2025 Meri's Gallery. This entire website was designed and coded by me using Dreamweaver.</div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/meriscreations_"><img src="icons/instagram.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/maria-portell-poveda-383041350/"><img src="icons/logolinkedin.png" alt="LinkedIn"></a>
+	 <a href="https://es.pinterest.com/mariaportellpoveda/"><img src="icons/pinterest.png" alt="Pinterest"></a>
+      </div>
+    </div>
+  </footer>
+	
+
+  <!-- JavaScript -->
+<script>
+window.addEventListener('load', () => {
+  const slides = document.querySelectorAll('.slide');
+  const slidesContainer = document.querySelector('.slides');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slidesContainer.style.transform = `translateX(-${index * 100}vw)`;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  showSlide(currentIndex);
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }, 3000);
+});
+
+</script>
+
+
+
+</body>
+</html>
