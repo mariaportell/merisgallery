@@ -101,13 +101,15 @@ window.addEventListener('load', () => {
 
 </script>
 <script>
-  const toggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("activo");
+    });
   });
 </script>
+
 
 </body>
 </html>
