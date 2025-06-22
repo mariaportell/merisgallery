@@ -488,19 +488,45 @@ footer {
     grid-template-columns: 1fr;
   }
 
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+  }
+  
+  .menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 20px 0;
+    flex-direction: column;
+  }
+  
+  .menu.active {
+    display: flex;
+  }
+  
   .menu ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    align-items: center;
   }
+}
 
-  header {
-    height: 60px;
-    padding: 0 20px;
-  }
-
-  .titulo {
-    font-size: 20px;
-  }
 
   .bienvenida h2 {
     font-size: 3rem;
