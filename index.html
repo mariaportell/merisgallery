@@ -9,6 +9,9 @@
 
   <!-- MENÚ Y TÍTULO -->
   <header>
+
+<div class="menu-toggle" id="menu-toggle">☰</div>
+
     <div class="menu-rosa">
       <nav class="menu">
         <ul>
@@ -97,6 +100,14 @@ window.addEventListener('load', () => {
   }, 3000);
 });
 
+</script>
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
 </script>
 
 
