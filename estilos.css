@@ -56,12 +56,16 @@ header {
   user-select: none;
 }
 
-/* SOLO EN MÓVILES: mover el título a la derecha */
 @media screen and (max-width: 768px) {
   .titulo {
-    left: auto;
-    right: 20px;
+    position: absolute;
+    left: auto;       /* elimina la posición izquierda */
+    right: 20px;      /* lo pegas a la derecha */
+    transform: none;  /* importante: quitar la transformación */
+    top: 50%;         /* para centrar verticalmente */
+    transform: translateY(-50%); /* centrar solo vertical */
   }
+
 
 /* Contenedor principal */
 main {
