@@ -475,67 +475,33 @@ footer {
   display: block;
 }
 
-/* Oculta el menú por defecto */
+/* Ocultar el menú por defecto en móvil */
 .menu {
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  overflow: hidden;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: white; /* o el color que uses */
-  z-index: 999;
+  display: none;
 }
 
-/* Muestra el menú cuando se activa */
+/* Mostrar el menú cuando tenga clase active */
 .menu.active {
-  max-height: 500px; /* ajusta según tu menú */
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Icono del menú */
-.menu-toggle {
   display: block;
-  font-size: 2em;
-  padding: 1em;
+}
+
+/* Mostrar el icono hamburguesa solo en móvil */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
   cursor: pointer;
-  z-index: 1000;
-  position: relative;
 }
 
-/* Estilos para que el menú se vea bien en móvil */
-.menu ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1em 0;
-  list-style: none;
-  margin: 0;
-}
-
-.menu li a {
-  text-decoration: none;
-  font-size: 1.2em;
-  color: black;
-}
-
-/* En pantallas grandes (ocultamos toggle y mostramos menú horizontal normal) */
-@media screen and (min-width: 768px) {
-  .menu {
-    all: unset;
-    display: flex;
-    gap: 2em;
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    max-height: none;
-  }
-
+/* En pantallas pequeñas, mostrar hamburguesa y ocultar menú normal */
+@media (max-width: 768px) {
   .menu-toggle {
+    display: block;
+  }
+  .menu {
     display: none;
   }
+  .menu.active {
+    display: block;
+  }
 }
+
