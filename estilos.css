@@ -59,12 +59,12 @@ header {
 @media screen and (max-width: 768px) {
   .titulo {
     position: absolute;
-    left: auto;       /* elimina la posición izquierda */
-    right: 20px;      /* lo pegas a la derecha */
-    transform: none;  /* importante: quitar la transformación */
-    top: 50%;         /* para centrar verticalmente */
-    transform: translateY(-50%); /* centrar solo vertical */
+    top: 20px;
+    right: 20px;
+    left: auto;
+    transform: none;
   }
+
 
 
 /* Contenedor principal */
