@@ -475,47 +475,67 @@ footer {
   display: block;
 }
 
-/* Ajustes responsive */
-@media (max-width: 600px) {
-  .projects-feed {
-    grid-template-columns: 1fr;
+/* Oculta el menú por defecto */
+.menu {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: white; /* o el color que uses */
+  z-index: 999;
+}
+
+/* Muestra el menú cuando se activa */
+.menu.active {
+  max-height: 500px; /* ajusta según tu menú */
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Icono del menú */
+.menu-toggle {
+  display: block;
+  font-size: 2em;
+  padding: 1em;
+  cursor: pointer;
+  z-index: 1000;
+  position: relative;
+}
+
+/* Estilos para que el menú se vea bien en móvil */
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
+  list-style: none;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: black;
+}
+
+/* En pantallas grandes (ocultamos toggle y mostramos menú horizontal normal) */
+@media screen and (min-width: 768px) {
+  .menu {
+    all: unset;
+    display: flex;
+    gap: 2em;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    max-height: none;
   }
 
   .menu-toggle {
-    display: block;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1100;
-  }
-
-  .menu {
     display: none;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    background-color: #000;
-    padding: 20px 0;
-    flex-direction: column;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .menu ul {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .bienvenida h2 {
-    font-size: 3rem;
   }
 }
-
