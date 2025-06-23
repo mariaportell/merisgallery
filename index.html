@@ -9,7 +9,6 @@
 
   <!-- MENÚ Y TÍTULO -->
 <header>
-  <div class="menu-toggle" id="menu-toggle">☰</div>
   <div class="menu-rosa">
     <nav class="menu" id="menu">
       <ul>
@@ -97,15 +96,6 @@ window.addEventListener('load', () => {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
   }, 3000);
-});
-
-window.addEventListener("load", function () {
-  const menuToggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("menu");
-
-  menuToggle.addEventListener("click", function () {
-    menu.classList.toggle("active");
-  });
 });
 
 </script>
