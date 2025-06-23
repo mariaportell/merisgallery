@@ -476,35 +476,23 @@ footer {
 }
 
 /* Ajustes responsive */
-@media (max-width: 900px) {
-  .projects-feed {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-}
-
 @media (max-width: 600px) {
   .projects-feed {
     grid-template-columns: 1fr;
   }
 
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-}
-
-@media (max-width: 600px) {
   .menu-toggle {
     display: block;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
     position: absolute;
     top: 20px;
     left: 20px;
     z-index: 1100;
   }
-  
+
   .menu {
     display: none;
     position: fixed;
@@ -515,20 +503,19 @@ footer {
     padding: 20px 0;
     flex-direction: column;
   }
-  
+
   .menu.active {
     display: flex;
   }
-  
+
   .menu ul {
     flex-direction: column;
     gap: 20px;
     align-items: center;
   }
-}
-
 
   .bienvenida h2 {
     font-size: 3rem;
   }
 }
+
