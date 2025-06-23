@@ -56,15 +56,6 @@ header {
   user-select: none;
 }
 
-@media screen and (max-width: 768px) {
-  .titulo {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    left: auto;
-    transform: none;
-  }
-
 
 
 /* Contenedor principal */
