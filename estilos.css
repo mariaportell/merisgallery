@@ -56,6 +56,13 @@ header {
   user-select: none;
 }
 
+/* SOLO EN MÓVILES: mover el título a la derecha */
+@media screen and (max-width: 768px) {
+  .titulo {
+    left: auto;
+    right: 20px;
+  }
+
 /* Contenedor principal */
 main {
   box-sizing: border-box;
