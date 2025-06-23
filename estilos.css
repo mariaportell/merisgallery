@@ -56,8 +56,6 @@ header {
   user-select: none;
 }
 
-
-
 /* Contenedor principal */
 main {
   box-sizing: border-box;
@@ -855,6 +853,4 @@ body {
 .design-item.wide {
   grid-column: span 2;
 }
-
-
 
