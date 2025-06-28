@@ -119,7 +119,6 @@ main {
   position: relative;
   width: 500px;  /* ← mismo valor que .main-img */
   height: 400px;
-  margin: 0 auto;
 }
 
 .main-img {
