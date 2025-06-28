@@ -213,6 +213,53 @@ main {
   transform: scale(1.1) translate(-50%, -50%);
   z-index: 3;
 }
+@media (max-width: 600px) {
+  .hover-gallery-wrapper {
+    padding: 0 10px; /* evita que toque los bordes */
+    height: auto; /* que no ocupe toda la altura */
+  }
+
+  .hover-gallery {
+    width: 90vw; /* 90% del ancho de la pantalla */
+    height: auto; /* que la altura se ajuste */
+    max-width: 400px; /* para que no crezca demasiado */
+  }
+
+  .main-img {
+    width: 100%; /* ocupa todo el contenedor */
+    height: auto;
+  }
+
+  .hidden-images {
+    width: 60vw; /* un poco más pequeño que hover-gallery */
+    height: 60vw;
+  }
+
+  .hidden-images img {
+    width: 40vw; /* imágenes proporcionalmente más pequeñas */
+  }
+
+  /* Reajustar las posiciones relativas de las imágenes ocultas para que quepan en móvil */
+
+  .hover-gallery:hover .hidden-images img:nth-child(1) {
+    transform: translate(-50%, -50%) translate(0, -25vw);
+  }
+  .hover-gallery:hover .hidden-images img:nth-child(2) {
+    transform: translate(-50%, -50%) translate(23vw, -11vw);
+  }
+  .hover-gallery:hover .hidden-images img:nth-child(3) {
+    transform: translate(-50%, -50%) translate(23vw, 11vw);
+  }
+  .hover-gallery:hover .hidden-images img:nth-child(4) {
+    transform: translate(-50%, -50%) translate(0, 20vw);
+  }
+  .hover-gallery:hover .hidden-images img:nth-child(5) {
+    transform: translate(-50%, -50%) translate(-23vw, 11vw);
+  }
+  .hover-gallery:hover .hidden-images img:nth-child(6) {
+    transform: translate(-50%, -50%) translate(-23vw, -11vw);
+  }
+}
 
 
 
