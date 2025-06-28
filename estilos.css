@@ -273,14 +273,15 @@ footer {
   text-align: center;
 }
 
-.section-title {
+.main-title {
   font-size: 3rem;
+  margin-top: 100px;
   margin-bottom: 60px;
   font-weight: 600;
   text-align: center;
-  font-family: 'Helvetica Neue', sans-serif; /* o el mismo que uses en contact-title */
-  margin-top: 100px;
+  font-family: 'Helvetica Neue', sans-serif;
 }
+
 
 .burbujas {
   display: flex;
