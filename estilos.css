@@ -56,6 +56,16 @@ header {
   user-select: none;
 }
 
+/* En móvil, que el título esté estático y ocupe línea aparte */
+@media (max-width: 600px) {
+  .titulo {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 22px; /* tamaño más pequeño */
+  }
+
 /* Contenedor principal */
 main {
   box-sizing: border-box;
