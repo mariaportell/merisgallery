@@ -274,10 +274,13 @@ footer {
 }
 
 .section-title {
-  font-size: 40px;
-  margin-bottom: 40px;
-  color: #111;
-  text-transform: uppercase;
+  font-size: 4rem;
+  margin-bottom: 60px;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin-top: 100px;
+  text-transform: none; /* si ya no quieres que se vea en mayúsculas */
 }
 
 .burbujas {
