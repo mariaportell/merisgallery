@@ -114,7 +114,22 @@ main {
   background-position: center center;
   background-size: cover; /* Ajusta y recorta bien sin deformar */
 }
-
+	
+@media (max-width: 600px) {
+  .carrusel {
+    width: 100%;
+    height: auto; /* para que no sea fijo */
+    margin-top: 60px; /* espacio con header */
+  }
+  .slides {
+    width: 400%; /* sigue siendo 4 slides */
+    height: auto;
+  }
+  .slide {
+    flex: 0 0 100%;
+    height: auto;
+    background-size: contain; /* para que no se corte */
+  }
 
 /* Galería con efecto hover CORAZON */
 .hover-gallery-wrapper {
