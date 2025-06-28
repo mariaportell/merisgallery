@@ -858,3 +858,24 @@ body {
   grid-column: span 2;
 }
 
+/* 🔽 MEDIA QUERIES: Estilos para pantallas pequeñas 🔽 */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .contenedor {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .imagen {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu {
+    display: block;
+    text-align: center;
+  }
