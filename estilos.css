@@ -107,87 +107,37 @@ main {
 }
 
 
-/* Galería con efecto hover CORAZON */
-.hover-gallery-wrapper {
-  display: flex;
-  justify-content: center;   /* Centra horizontalmente */
-  align-items: center;       /* Centra verticalmente */
-  height: 100vh;             /* Ocupa toda la pantalla */
-  margin: 0;                 /* Elimina márgenes que lo desplacen */
+/* SECCIÓN: Proyecto La Muñeca */
+
+#proyecto-muneca {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
 }
 
-.hover-gallery {
-  position: relative;
-  width: 500px;  /* ← mismo valor que .main-img */
-  height: 400px;
-}
-
-.main-img {
-  position: relative;
-  width: 500px;         /* ← hazlo más grande aquí */
-  height: auto;
-  z-index: 2;
+/* Estilo del video vertical */
+#proyecto-muneca video {
   display: block;
-  margin: 0 auto;       /* ← esto centra horizontalmente */
+  margin: 0 auto 40px auto;
+  width: 100%;
+  max-width: 360px; /* video 9:16 */
+  border-radius: 12px;
 }
 
-/* Contenedor de imágenes ocultas */
-.hidden-images {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+/* Galería tipo mosaico adaptable */
+.galeria-muneca {
+  column-count: 2;
+  column-gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-/* Todas las imágenes ocultas */
-.hidden-images img {
-  position: absolute;
-  width: 200px; /* <-- Aumenta este valor para hacerlas más grandes */
-  height: auto;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%) translate(0, 0);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  cursor: pointer;
-  z-index: 1;
-}
-
-/* Al hacer hover en el contenedor */
-.hover-gallery:hover .hidden-images img {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Posiciones específicas para cada imagen formando círculo */
-
-/* 6 imágenes a 60º */
-.hover-gallery:hover .hidden-images img:nth-child(1) {
-  transform: translate(-50%, -50%) translate(0, -280px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(2) {
-  transform: translate(-50%, -50%) translate(270px, -120px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(3) {
-  transform: translate(-50%, -50%) translate(270px, 120px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(4) {
-  transform: translate(-50%, -50%) translate(0, 220px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(5) {
-  transform: translate(-50%, -50%) translate(-270px, 120px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(6) {
-  transform: translate(-50%, -50%) translate(-270px, -120px);
-}
-
-/* Hover en cada imagen oculta para agrandar */
-.hidden-images img:hover {
-  transform: scale(1.1) translate(-50%, -50%);
-  z-index: 3;
+.galeria-muneca img {
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  display: block;
+  break-inside: avoid; /* evita que una imagen se corte entre columnas */
 }
 
 /* Reset básico para evitar errores de box-sizing */
@@ -894,76 +844,6 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-}
-
- /* Ajustes para hover-gallery (corazón) */
-.hover-gallery-wrapper {
-  height: auto;
-  padding-top: 120px;   /* ↑ espacio arriba */
-  padding-bottom: 150px; /* ↓ espacio abajo */
-  position: relative;    /* por si acaso se usa position absolute dentro */
-}
-.hover-gallery {
-  position: relative;
-  width: 90%;
-  max-width: 400px;
-  height: auto;
-  margin: 0 auto;
-  overflow: visible;
-}
-
-.main-img {
-  width: 60%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.hidden-images {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 250px;
-  height: 250px;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  overflow: visible;
-}
-
-.hidden-images img {
-  position: absolute;
-  width: 90px;
-  height: auto;
-  opacity: 0;
-  transform: translate(-50%, -50%) translate(0, 0);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  cursor: pointer;
-  z-index: 1;
-}
-/* Hover en móvil para mostrar (si tienes touch, esto puede necesitar JS alternativo) */
-.hover-gallery:hover .hidden-images img {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* NUEVAS posiciones adaptadas para móvil */
-.hover-gallery:hover .hidden-images img:nth-child(1) {
-  transform: translate(-50%, -50%) translate(0, -120px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(2) {
-  transform: translate(-50%, -50%) translate(110px, -60px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(3) {
-  transform: translate(-50%, -50%) translate(110px, 60px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(4) {
-  transform: translate(-50%, -50%) translate(0, 120px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(5) {
-  transform: translate(-50%, -50%) translate(-110px, 60px);
-}
-.hover-gallery:hover .hidden-images img:nth-child(6) {
-  transform: translate(-50%, -50%) translate(-110px, -60px);
 }
 
   /* Ajuste del texto enorme */
