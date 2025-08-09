@@ -699,9 +699,21 @@ body {
   max-width: 450px;
 }
 
-.conceptlab-item.pequeña img {
-  max-width: 200px;
+.conceptlab-description {
+  margin-top: 20px; /* Espacio entre imágenes y texto */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  max-width: 800px; /* Limita el ancho para mejor lectura */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify; /* Justificar texto para un look más profesional */
 }
+
+.conceptlab-description p {
+  margin-bottom: 12px; /* Espacio entre párrafos */
+}
+
 
 .illustrations-gallery {
 	  margin-top: 100px; /* o el valor que necesites según la altura del menú */
@@ -853,3 +865,4 @@ body {
     padding: 0 10px;
   }
 }
+
