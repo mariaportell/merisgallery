@@ -673,7 +673,7 @@ body {
 
 .conceptlab-item {
   text-align: center;
-  margin-top: 60px; /* Espacio entre bloques */
+  margin-top: 80px; /* Espacio entre bloques */
 }
 
 .conceptlab-item h3 {
@@ -865,4 +865,5 @@ body {
     padding: 0 10px;
   }
 }
+
 
