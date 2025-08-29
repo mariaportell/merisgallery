@@ -714,27 +714,26 @@ body {
   margin-bottom: 12px; /* Espacio entre párrafos */
 }
 
-/* Contenedor del vídeo para limitar ancho y centrar */
+/* Mahou Skyline: vídeo pequeño y responsive */
 #proyecto-mahou .video-container {
   display: block;
-  max-width: 360px;   /* tamaño máximo en escritorio */
-  width: 90%;         /* ancho relativo en móvil y tablet */
+  max-width: 360px;     /* ancho máximo en escritorio */
+  width: 90%;           /* ancho relativo en móvil y tablet */
   margin: 0 auto 30px auto; /* centrado horizontal y margen inferior */
 }
 
 #proyecto-mahou video {
-  width: 100%;        /* ocupa todo el ancho del contenedor */
+  width: 100%;          /* ocupa todo el ancho del contenedor */
   height: auto;
   border-radius: 12px;
   display: block;
 }
 
-/* Opcional: ajustar aún más en pantallas muy grandes */
+/* Ajuste opcional para pantallas muy grandes */
 @media (min-width: 1200px) {
   #proyecto-mahou .video-container {
-    max-width: 400px;  /* un poquito más grande en pantallas grandes */
+    max-width: 400px;   /* un poquito más grande en pantallas grandes */
   }
-}
 
 .illustrations-gallery {
 	  margin-top: 100px; /* o el valor que necesites según la altura del menú */
@@ -886,6 +885,7 @@ body {
     padding: 0 10px;
   }
 }
+
 
 
 
