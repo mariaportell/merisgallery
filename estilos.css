@@ -735,12 +735,6 @@ body {
   display: block;
 }
 
-/* Ajuste opcional para pantallas muy grandes */
-@media (min-width: 1200px) {
-  #proyecto-mahou .video-container-mahou {
-    max-width: 400px; /* un poquito más grande en pantallas grandes */
-  }
-
 .illustrations-gallery {
 	  margin-top: 100px; /* o el valor que necesites según la altura del menú */
   display: grid;
@@ -891,6 +885,7 @@ body {
     padding: 0 10px;
   }
 }
+
 
 
 
