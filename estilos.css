@@ -713,6 +713,14 @@ body {
 .conceptlab-description p {
   margin-bottom: 12px; /* Espacio entre párrafos */
 }
+.conceptlab-item video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  max-width: 450px; /* igual que .mediana img */
+}
 
 
 .illustrations-gallery {
@@ -865,6 +873,7 @@ body {
     padding: 0 10px;
   }
 }
+
 
 
 
