@@ -714,16 +714,22 @@ body {
   margin-bottom: 12px; /* Espacio entre párrafos */
 }
 
-/* Mahou Skyline: vídeo pequeño y responsive */
-#proyecto-mahou .video-container {
-  display: block;
-  max-width: 360px;     /* ancho máximo en escritorio */
-  width: 90%;           /* ancho relativo en móvil y tablet */
-  margin: 0 auto 30px auto; /* centrado horizontal y margen inferior */
+/* Mahou Skyline: vídeo centrado y responsive */
+#proyecto-mahou {
+  padding: 40px 20px;   /* espacio interior seguro */
+  text-align: center;   /* centra el título y contenido */
+  background-color: #f9f9f9;
+}
+
+#proyecto-mahou .video-container-mahou {
+  display: inline-block; /* evita que el contenedor ocupe todo el ancho */
+  max-width: 360px;      /* ancho máximo en escritorio */
+  width: 100%;           /* ocupa todo el ancho del contenedor en móviles */
+  margin: 0 auto 30px auto; /* centrado horizontal con margen inferior */
 }
 
 #proyecto-mahou video {
-  width: 100%;          /* ocupa todo el ancho del contenedor */
+  width: 100%;           /* se adapta al contenedor */
   height: auto;
   border-radius: 12px;
   display: block;
@@ -731,8 +737,8 @@ body {
 
 /* Ajuste opcional para pantallas muy grandes */
 @media (min-width: 1200px) {
-  #proyecto-mahou .video-container {
-    max-width: 400px;   /* un poquito más grande en pantallas grandes */
+  #proyecto-mahou .video-container-mahou {
+    max-width: 400px; /* un poquito más grande en pantallas grandes */
   }
 
 .illustrations-gallery {
@@ -885,6 +891,7 @@ body {
     padding: 0 10px;
   }
 }
+
 
 
 
