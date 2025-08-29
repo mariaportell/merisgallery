@@ -715,12 +715,11 @@ body {
 }
 
 .video-pequeño {
-  width: 60%;          /* ocupa el 60% del ancho del contenedor */
-  max-width: 300px;    /* nunca más grande de 300px en pantallas grandes */
-  height: auto;
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 100%;
+  max-width: 360px; /* tamaño proporcional similar a La Muñeca */
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
 }
 
 
@@ -875,6 +874,7 @@ body {
     padding: 0 10px;
   }
 }
+
 
 
 
