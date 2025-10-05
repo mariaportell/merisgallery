@@ -11,6 +11,12 @@ body {
   margin: 0;
 }
 
+/* Ajuste solo en pantallas pequeñas */
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px; /* más espacio porque el header es más alto en móvil */
+  }
+
 /* Header fijo */
 header {
   position: fixed;
@@ -885,6 +891,7 @@ body {
     padding: 0 10px;
   }
 }
+
 
 
 
