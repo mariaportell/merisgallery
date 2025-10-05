@@ -304,12 +304,6 @@ footer {
   margin-top: 100px;
 }
 
-/* Ajuste solo para móvil */
-@media (max-width: 768px) {
-  .skills-title {
-    margin-top: 160px; /* o el valor que haga que no se esconda */
-  }
-
 .skills-icons img {
   width: 60px;
   height: auto;
@@ -891,6 +885,7 @@ body {
     padding: 0 10px;
   }
 }
+
 
 
 
