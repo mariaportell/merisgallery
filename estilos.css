@@ -161,18 +161,19 @@ main {
    GALERÍA DE PROYECTOS
    ========================= */
 
+/* ==================================================
+   PROJECTS PAGE
+   ================================================== */
+
 .projects-feed {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
   width: 100%;
   max-width: 1200px;
-  margin: 80px auto 50px auto;
+  margin: 60px auto 50px;
   padding: 0;
 }
-
-
-/* Cada proyecto es cuadrado */
 
 .project-tile {
   position: relative;
@@ -182,9 +183,6 @@ main {
   display: block;
 }
 
-
-/* Imagen del proyecto */
-
 .project-tile img {
   width: 100%;
   height: 100%;
@@ -193,45 +191,37 @@ main {
   transition: transform 0.3s ease;
 }
 
-
-/* Nombre del proyecto */
-
 .project-tile .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0);
+  z-index: 2;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  background-color: rgba(0, 0, 0, 0);
   color: white;
+
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
 
-  padding: 20px;
+  padding: 15px;
   opacity: 0;
 
-  transition:
-    background-color 0.3s ease,
-    opacity 0.3s ease;
-
+  transition: background-color 0.3s ease, opacity 0.3s ease;
   pointer-events: none;
 }
-
-
-/* Hover */
 
 .project-tile:hover img {
   transform: scale(1.05);
 }
 
 .project-tile:hover .overlay {
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
 }
-
 
 /* ==================================================
    CONTACT PAGE
