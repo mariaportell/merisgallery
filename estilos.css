@@ -153,7 +153,27 @@ main {
   font-size: 5rem;
   font-weight: 700;
 }
+/* =========================
+   TEXTO ABOUT
+   ========================= */
 
+.about-text {
+  max-width: 850px;
+  margin: 80px auto 120px;
+  padding: 0 40px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.about-text .about-intro {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
 
 /* ==================================================
    PÁGINAS INDIVIDUALES DE PROYECTOS
@@ -522,7 +542,23 @@ footer {
     font-size: 2.5rem;
     text-align: center;
   }
+   
+/* ABOUT — TEXTO */
 
+.about-text {
+  margin: 60px auto 80px;
+  padding: 0 20px;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.about-text .about-intro {
+  font-size: 1.3rem;
+}
 
   /* CONTACT */
 
