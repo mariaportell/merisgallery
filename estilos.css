@@ -27,6 +27,15 @@ header {
   z-index: 1000;
 }
 
+/* Título Maria Portell */
+.titulo {
+  position: static;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  user-select: none;
+}
 /* Menú de navegación */
 .menu ul {
   list-style: none;
@@ -45,18 +54,6 @@ header {
 .menu a:hover {
   color: #222;
 }
-
-/* Título centrado meri's gallery */
-.titulo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-weight: bold;
-  font-size: 28px;
-  user-select: none;
-}
-
 
 /* Contenedor principal */
 main {
