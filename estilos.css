@@ -84,8 +84,7 @@ main {
   height: 800px;
   overflow: hidden;
   position: relative;
-  margin-top: 80px;
-  /* Añadir para evitar que se salga del body */
+  margin-top: 0px;
   box-sizing: border-box;
 }
 
