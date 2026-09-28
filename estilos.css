@@ -186,304 +186,84 @@ footer {
   .footer-text {
     order: 1;
   }
-}
-/* Página de Certifications & Skills */
-.certificaciones-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.skills-title {
-  font-size: 3rem;
-  margin-top: 120px;
-  margin-bottom: 60px;
-  font-weight: 600;
-  text-align: center;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
-
-.burbujas {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin: 60px auto 80px auto; /* Aquí aumentamos el margen superior */
-  flex-wrap: wrap;
-}
-
-.burbuja {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-color: #000;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  position: relative;
-  padding: 20px;
-  text-align: center;
-}
-
-.burbuja span {
-  position: absolute;
-  width: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: opacity 0.3s ease;
-}
-
-.burbuja .default-text {
-  opacity: 1;
-}
-
-.burbuja .hover-text {
-  opacity: 0;
-  color: black;
-}
-
-.burbuja:hover {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-}
-
-.burbuja:hover .default-text {
-  opacity: 0;
-}
-
-.burbuja:hover .hover-text {
-  opacity: 1;
-}
-
-/* SKILLS ICONOS */
-.skills-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-.skills-title {
-  font-size: 3rem;
-  margin-bottom: 60px;
-  font-weight: 600;
-  text-align: center;
-  font-family: 'Helvetica Neue', sans-serif; /* o el mismo que uses en contact-title */
-  margin-top: 120px;
-}
-
-.skills-icons img {
-  width: 60px;
-  height: auto;
-  transition: transform 0.3s ease;
-  filter: grayscale(100%);
-}
-
-.skills-icons img:hover {
-  transform: scale(1.2);
-  filter: grayscale(0%);
 	
-}
-/* NUEVO DISEÑO ICONOS CON NOMBRES */
-.skills-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 60px;
-  margin-bottom: 80px; /* más espacio entre categorías */
-}
-
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease;
-  filter: grayscale(100%);
-}
-
-.skill-item img {
-  width: 60px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.skill-item span {
-  opacity: 0;
-  margin-top: 8px;
-  font-size: 14px;
-  color: #444;
-  transition: opacity 0.3s ease;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
-.skill-item:hover {
-  filter: grayscale(0%);
-}
-
-.skill-item:hover img {
-  transform: scale(1.2);
-}
-
-.skill-item:hover span {
-  opacity: 1;
-}
-
-/* Estilo para títulos de categoría */
-.skills-section h2 {
-  font-size: 22px;
-  font-family: 'Arial Black', sans-serif;
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 20px;
-}
-
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-  color: #111;
-}
-
-.site-header {
-  position: sticky;
-  top: 0;
-  background: white;
-  border-bottom: 1px solid #ddd;
-  z-index: 1000;
-  padding: 1rem;
-}
-
-.site-header nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-nav a.active {
-  border-bottom: 2px solid #000;
-}
+/* =========================
+   PROJECTS PAGE
+   ========================= */
 
 .projects-feed {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
-  grid-template-rows: repeat(2, 1fr);    /* 2 filas */
-  gap: 0; /* sin separación, pon aquí si quieres un poco de espacio */
-  width: 100%;          /* Ocupa todo el ancho del contenedor padre */
-  max-width: 1200px;    /* Máximo ancho para centrar y no expandir a toda la pantalla */
-  margin: 220px auto 50px auto; /* Margen superior e inferior, centrado horizontalmente */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto 50px auto;
   padding: 0;
-  height: calc(2 * 250px);
 }
 
-/* Ajustamos altura fija para cada proyecto, para mantener el ratio */
+/* Cada proyecto es cuadrado */
 .project-tile {
   position: relative;
   overflow: hidden;
-  height: 250px; /* fija altura de cada tile */
+  aspect-ratio: 1 / 1;
   cursor: pointer;
-  display: block; /* Asegura que el enlace ocupa todo el espacio */
+  display: block;
 }
 
+/* Imagen del proyecto */
 .project-tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
-  position: relative; /* Añadido por claridad de stacking */
-  z-index: 1; /* Asegura que la imagen esté detrás del overlay */
 }
 
+/* Nombre del proyecto */
 .project-tile .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0); /* Transparente por defecto */
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
+  text-align: center;
+  padding: 20px;
   opacity: 0;
   transition: background-color 0.3s ease, opacity 0.3s ease;
-  z-index: 2; /* Asegura que el overlay está encima de la imagen */
-  pointer-events: none; /* Permite que el click siga funcionando en el enlace */
+  pointer-events: none;
 }
 
+/* Efecto hover */
 .project-tile:hover img {
   transform: scale(1.05);
 }
 
 .project-tile:hover .overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.65);
   opacity: 1;
-
-}
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", sans-serif;
-  background: #fff;
-  color: #111;
-  overflow-x: hidden;
 }
 
-.scroll-showcase {
-  position: relative;
-  height: 400vh; /* largo suficiente para que se vea el efecto */
-  background: #f9f9f9;
+/* Tablet */
+@media (max-width: 900px) {
+  .projects-feed {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.fixed-title {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  z-index: 10;
-  pointer-events: none;
-}
+/* Móvil */
+@media (max-width: 600px) {
+  .projects-feed {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+  }
 
-.media-container {
-  position: relative;
-  width: 100%;
-  padding-top: 100vh;
-}
-
-.media-item {
-  position: absolute;
-  width: 200px;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 1s ease-out;
-}
-
-.media-item.left {
-  left: 10%;
-}
-
-.media-item.right {
-  right: 10%;
-}
-
-.media-item.visible {
-  opacity: 1;
-  transform: translateY(0);
+  .project-tile .overlay {
+    font-size: 0.85rem;
+  }
 }
 .contact-section {
   text-align: center;
