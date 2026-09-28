@@ -550,21 +550,33 @@ footer {
     text-align: center;
   }
    
-/* ABOUT — TEXTO */
+/* =========================
+   TEXTO ABOUT
+   ========================= */
 
 .about-text {
-  margin: 60px auto 80px;
-  padding: 0 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 100px auto 140px;
+  padding: 0 50px;
 }
 
 .about-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 22px;
+  font-size: 1.35rem;
+  line-height: 1.65;
+  font-weight: 400;
+  margin: 0 0 45px 0;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
 }
 
 .about-text .about-intro {
-  font-size: 1.3rem;
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 700;
+  margin-bottom: 55px;
 }
 
   /* CONTACT */
