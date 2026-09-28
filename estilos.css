@@ -108,39 +108,6 @@ main {
 }
 
 
-/* SECCIÓN: Proyecto La Muñeca */
-
-#proyecto-muneca {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-}
-
-/* Estilo del video vertical */
-#proyecto-muneca video {
-  display: block;
-  margin: 0 auto 40px auto;
-  width: 100%;
-  max-width: 360px; /* video 9:16 */
-  border-radius: 12px;
-}
-
-/* Galería tipo mosaico adaptable */
-.galeria-muneca {
-  column-count: 2;
-  column-gap: 16px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.galeria-muneca img {
-  width: 100%;
-  margin-bottom: 16px;
-  border-radius: 8px;
-  display: block;
-  break-inside: avoid; /* evita que una imagen se corte entre columnas */
-}
-
 /* Reset básico para evitar errores de box-sizing */
 * {
   box-sizing: border-box;
