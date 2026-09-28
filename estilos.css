@@ -51,7 +51,7 @@ header {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
@@ -147,11 +147,17 @@ main {
   box-sizing: border-box;
 }
 
-/* Aseguramos que el body tenga espacio para empujar el footer abajo */
-html, body {
-  height: 113%;
+/*html y body*/
+html {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  padding-top: 110px;
   display: flex;
   flex-direction: column;
 }
