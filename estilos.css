@@ -150,19 +150,134 @@ main {
   font-size: 5rem;
   font-weight: 700;
 }
-
-
 /* ==================================================
-   PROJECTS PAGE
+   PROJECT PAGE
+   Plantilla para las páginas individuales de proyectos
    ================================================== */
 
+.project-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 40px;
+}
 
-/* =========================
-   GALERÍA DE PROYECTOS
-   ========================= */
+
+/* TÍTULO DEL PROYECTO */
+
+.project-intro {
+  margin-bottom: 60px;
+}
+
+.project-intro h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.project-role {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+/* TEXTO */
+
+.project-text {
+  max-width: 650px;
+  margin: 70px auto;
+}
+
+.project-text p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+
+/* IMAGEN GRANDE */
+
+.project-image-full {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* DOS IMÁGENES */
+
+.project-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 70px 0;
+}
+
+.project-image-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* VOLVER A PROJECTS */
+
+.project-back {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.project-back a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.project-back a:hover {
+  text-decoration: underline;
+}
+
+
+/* PROJECT PAGE — MÓVIL */
+
+@media (max-width: 600px) {
+
+  .project-page {
+    padding: 40px 20px;
+  }
+
+  .project-intro {
+    margin-bottom: 40px;
+  }
+
+  .project-intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .project-text {
+    margin: 50px auto;
+  }
+
+  .project-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .project-image-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 50px 0;
+  }
+
+  .project-back {
+    margin-top: 60px;
+  }
+
+}
+
 
 /* ==================================================
    PROJECTS PAGE
+   Galería general de proyectos
    ================================================== */
 
 .projects-feed {
@@ -222,6 +337,7 @@ main {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
 }
+
 
 /* ==================================================
    CONTACT PAGE
