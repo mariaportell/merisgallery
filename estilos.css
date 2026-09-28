@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  padding-top: 80px; /* espacio para header fijo */
+	padding-top: 110px; /* espacio para header fijo */
   margin: 0;
 }
 
@@ -36,11 +36,15 @@ header {
   text-align: center;
   user-select: none;
 }
+
 /* Menú de navegación */
 .menu ul {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
+  margin-top: 10px;
 }
 
 .menu a {
