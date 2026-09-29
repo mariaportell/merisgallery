@@ -233,9 +233,12 @@ main {
 
 .project-image-full {
   display: block;
-  width: 100%;
+  width: auto;
   max-width: 100%;
+  max-height: 750px;
   height: auto;
+  margin: 70px auto;
+  object-fit: contain;
 }
 
 
