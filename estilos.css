@@ -690,11 +690,12 @@ footer {
 
   /* IMAGEN GRANDE */
 
-  .project-image-full {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
+.project-image-full {
+  width: auto;
+  max-width: 100%;
+  max-height: 600px;
+  margin: 40px auto;
+}
 
 
   /* DOS IMÁGENES */
